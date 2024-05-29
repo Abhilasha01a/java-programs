@@ -1,0 +1,23 @@
+package varlenarg;
+
+import java.util.Arrays;
+
+public class Main {
+	public static void main(String[]args) {
+		func(1,2,3,4);
+		
+		func1(2,3,"aa","bbb");
+	}
+	static void func1(int a,int b,String ...v)
+	{
+		 System.out.println(Arrays.toString(v));
+	}
+
+	 static void func(int ...v) {
+		 System.out.println(Arrays.toString(v));
+		// TODO Auto-generated method stub
+		 
+		
+	}
+
+}
