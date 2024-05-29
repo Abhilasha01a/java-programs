@@ -1,0 +1,64 @@
+package Practice1;
+
+import java.util.Arrays;
+
+public class Main {
+	public static void main(String[] args) {
+		int [] arr= {1,2,3,4,5};
+		System.out.println("Before Swapping:\n"+Arrays.toString(arr));
+		swap(arr,1,2);
+		System.out.println("After Swapping:\n"+Arrays.toString(arr));
+		System.out.println("Maximum num is="+findMax(arr));
+		
+		//to get max number within specified indexes
+		
+		System.out.println("Max in b/w 2,4 = "+MAxwithinIndex(arr,2,4));
+		
+		//to reverse the arr
+		
+		reverse(arr);
+		
+		System.out.print("After reversing=\n"+Arrays.toString(arr));
+	}
+	
+	static void reverse(int[] arr) {
+		int i=0,j=arr.length-1;
+		while(i<j)
+		{
+			swap(arr,i,j);
+			i++;
+			j--;
+		}
+		
+		
+	}
+	private static int MAxwithinIndex(int[] arr, int i, int j) {
+		int Max=arr[i];
+		for(int s=i;s<=j;s++)
+		{
+			if(arr[s]>Max) {
+				Max=arr[s];
+			}
+		}
+		return Max;
+	}
+	private static int findMax(int[] arr) {
+		int Max=arr[0];
+		for(int i=1;i<arr.length;i++)
+		{
+			if(arr[i]>Max) {
+				Max=arr[i];
+			}
+		}
+		return Max;
+	}
+	 static void swap(int [] arr,int a,int b) {
+		int temp;
+		temp=arr[a];
+		arr[a]=arr[b];
+		arr[b]=temp;
+		
+	}
+	
+	
+}
