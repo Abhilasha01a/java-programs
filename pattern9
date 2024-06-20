@@ -1,0 +1,44 @@
+
+//   *  
+//  * * 
+// *   *
+//  * * 
+//   * 
+class HelloWorld {
+    public static void main(String[] args) {
+        int n=5,m,s=0;
+        if(n%2==0)
+        {
+            m=n/2;
+        }
+        else
+        {
+            m=(n/2)+1;
+        }
+        int i,j;
+        for(i=1;i<=n;i++)
+        {
+            for(j=1;j<=n;j++)
+            {
+                if(j==m-s || j==m+s)
+                {
+                    System.out.print("*");
+                }
+                else
+                {
+                     System.out.print(" ");
+                }
+            }
+                
+                if(i<m)
+                {
+                    s++;
+                }
+                else 
+                {
+                    s--;
+                }
+            System.out.println();
+        }
+    }
+}
